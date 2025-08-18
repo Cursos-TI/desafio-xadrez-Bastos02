@@ -3,10 +3,9 @@
 int main() {
     
 // MOVIMENTAÇAO DA TORRE
-int torre = 0;
 printf("--- MOVIMENTAÇÃO DA TORRE ---\n");
 
-for(torre; torre <5; torre++)
+for (int torre = 0; torre <5; torre++)
     printf("-> DIREITA\n");
 
 // MOVIMENTAÇÃO DO BISPO
@@ -20,6 +19,16 @@ while (bispo <5)
     bispo++;
 }
 
+// MOVIMENTAÇÃO DA RAINHA
+int rainha = 0;
+printf("--- MOVIMENTAÇÃO DA RAINHA ---\n");
 
-    return 0;
+do 
+{
+
+    printf("<- ESQUERDA\n");
+    rainha++;
+} while (rainha < 8);
+    
+return 0;
 }
