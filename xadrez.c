@@ -30,5 +30,21 @@ do
     rainha++;
 } while (rainha < 8);
     
+// MOVIMENTAÇAO DO CAVALO
+printf("--- MOVIMENTAÇÃO DO CAVALO ---\n");
+
+int cavalo = 0; 
+int cavaloE = 0; 
+
+for (cavalo = 0; cavalo <2; cavalo++)
+    {
+    printf("↓ BAIXO\n");
+    } 
+    while(cavaloE < 1)
+    {
+    printf("<- ESQUERDA\n");
+    cavaloE++;
+    }
+
 return 0;
 }
