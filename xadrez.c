@@ -9,12 +9,12 @@ void MovimentacaoTorre(int numerotorre)
     }
 }
 
-void Movimentacao(int numerotorre)
+void MovimentacaoRainha(int numerorainha)
 {
-    if(numerotorre < 5 )
+    if(numerorainha < 8 )
     {
-    printf("-> DIREITA\n");
-    MovimentacaoTorre(numerotorre + 1);
+    printf("<- ESQUERDA\n");
+    MovimentacaoRainha(numerorainha + 1);
     }
 }
 
@@ -41,16 +41,11 @@ while (bispo <5)
 }
 
 // MOVIMENTAÇÃO DA RAINHA
-int rainha = 0;
 printf("--- MOVIMENTAÇÃO DA RAINHA ---\n");
 
-do 
-{
+int rainha = 0;
+MovimentacaoRainha(rainha);
 
-    printf("<- ESQUERDA\n");
-    rainha++;
-} while (rainha < 8);
-    
 // MOVIMENTAÇAO DO CAVALO
 printf("--- MOVIMENTAÇÃO DO CAVALO ---\n");
 
