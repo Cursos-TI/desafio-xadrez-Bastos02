@@ -9,6 +9,16 @@ void MovimentacaoTorre(int numerotorre)
     }
 }
 
+void Movimentacaobispo(int numerobispo)
+{
+    if(numerobispo < 5 )
+    {
+    printf(" ↑ CIMA-DIREITA ->\n");
+    Movimentacaobispo(numerobispo + 1);
+    }
+}
+
+
 void MovimentacaoRainha(int numerorainha)
 {
     if(numerorainha < 8 )
@@ -30,15 +40,10 @@ MovimentacaoTorre(torre);
 
 
 // MOVIMENTAÇÃO DO BISPO
-int bispo = 0;
 printf("--- MOVIMENTAÇÃO DO BISPO ---\n");
 
-
-while (bispo <5)
-{
-    printf(" ↑ CIMA-DIREITA ->\n");
-    bispo++;
-}
+int bispo = 0;
+Movimentacaobispo(bispo);
 
 // MOVIMENTAÇÃO DA RAINHA
 printf("--- MOVIMENTAÇÃO DA RAINHA ---\n");
