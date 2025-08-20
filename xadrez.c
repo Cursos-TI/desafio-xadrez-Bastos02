@@ -1,12 +1,33 @@
 #include <stdio.h>
 
+void MovimentacaoTorre(int numerotorre)
+{
+    if(numerotorre < 5 )
+    {
+    printf("-> DIREITA\n");
+    MovimentacaoTorre(numerotorre + 1);
+    }
+}
+
+void Movimentacao(int numerotorre)
+{
+    if(numerotorre < 5 )
+    {
+    printf("-> DIREITA\n");
+    MovimentacaoTorre(numerotorre + 1);
+    }
+}
+
+
+
 int main() {
     
 // MOVIMENTAÇAO DA TORRE
 printf("--- MOVIMENTAÇÃO DA TORRE ---\n");
 
-for (int torre = 0; torre <5; torre++)
-    printf("-> DIREITA\n");
+int torre = 0;
+MovimentacaoTorre(torre);
+
 
 // MOVIMENTAÇÃO DO BISPO
 int bispo = 0;
