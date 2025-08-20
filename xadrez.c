@@ -9,25 +9,21 @@ void MovimentacaoTorre(int numerotorre)
     }
 }
 
-int cimaB = 0;
-int direitaB = 0;
-
-void Movimentacaobispo(int numerobispo)
+void Movimentacaobispo(int linha, int totaldecasas)
 {
-    if(numerobispo >= 5)
+    if(linha >= totaldecasas)
     {
         return;
     }
-//loop externo
-    printf("↑ CIMA\n");
 
-//loop interno 
-    for(direitaB = 0; direitaB < 1; direitaB++)
+    printf("↑ CIMA\n");
+//loop interno
+    for(int direita = 0; direita < 1; direita++)
     {
         printf("-> DIREITA\n");
-    }    
+    }
 
-Movimentacaobispo(numerobispo + 1);    
+    Movimentacaobispo(linha + 1, totaldecasas);
 }
 
 
@@ -51,7 +47,7 @@ MovimentacaoTorre(torre);
 
 // MOVIMENTAÇÃO DO BISPO
 printf("--- MOVIMENTAÇÃO DO BISPO ---\n");
-Movimentacaobispo(0);
+Movimentacaobispo(0,5);
 
 // MOVIMENTAÇÃO DA RAINHA
 printf("--- MOVIMENTAÇÃO DA RAINHA ---\n");
