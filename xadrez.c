@@ -28,8 +28,6 @@ void MovimentacaoRainha(int numerorainha)
     }
 }
 
-
-
 int main() {
     
 // MOVIMENTAÇAO DA TORRE
@@ -54,18 +52,28 @@ MovimentacaoRainha(rainha);
 // MOVIMENTAÇAO DO CAVALO
 printf("--- MOVIMENTAÇÃO DO CAVALO ---\n");
 
+//loop externo sobe duas casas
 int cavalo = 0; 
-int cavaloE = 0; 
 
-for (cavalo = 0; cavalo <2; cavalo++)
+for(cavalo = 0; cavalo < 3; cavalo++)
+{
+    if(cavalo < 2 )
     {
-    printf("↓ BAIXO\n");
-    } 
-    while(cavaloE < 1)
-    {
-    printf("<- ESQUERDA\n");
-    cavaloE++;
+    printf("↑ CIMA\n");
+    continue;
     }
+
+
+//movimentação direita
+    int cavaloD = 0; 
+
+    while (cavaloD < 1)
+    {
+        printf("-> DIREITA\n");
+        cavaloD++;
+        break;
+    }
+}
 
 return 0;
 }
